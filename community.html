@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community - Book Haven</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header placeholder -->
+  <div id="header"></div>
+
+  <main class="community-page">
+    <section class="event">
+      <h2>Book Restoration Workshop</h2>
+      <p>
+        Join us this Saturday for our free book restoration workshop where<br />
+        you can learn to repair books of your own from a world class expert.
+      </p>
+    </section>
+
+    <section class="event">
+      <h2>Learn To Read Day</h2>
+      <p>
+        This Friday is our Learn to Read Day! All children's books are 50% off<br />
+        online and in store for the whole day!
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
+
+  <!-- Script to load header and footer -->
+  <script>
+    // Load header
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+        const pageTitle = document.getElementById('page-title');
+        if (pageTitle) pageTitle.textContent = document.title.split(' - ')[0];
+      });
+
+    // Load footer
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

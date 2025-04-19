@@ -1,0 +1,239 @@
+/* Add this to your CSS if not already present */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Wrap all page content */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Let main content grow to fill space */
+  main {
+    flex: 1;
+  }
+  
+  
+  header {
+    background: #fdddec;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    width: 40px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9em;
+  }
+  
+  .cart {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .testimonial {
+    margin: 30px auto;
+    text-align: center;
+  }
+  
+  .label {
+    background-color: #bdb06c;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .code-icon {
+    margin-left: 5px;
+  }
+  
+  .main-product {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .main-product img {
+    width: 70%;
+    border: 1px solid #eee;
+    border-radius: 6px;
+  }
+  
+  .items-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .items-row img {
+    max-width: 45%;
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background: #fdddec;
+    text-align: center;
+    padding: 20px 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .footer-logo {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  
+  /* ===== Gallery Page Specific Styles ===== */
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .item {
+    text-align: center;
+  }
+  
+  .item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .item p {
+    margin: 8px 0 4px;
+    font-weight: bold;
+  }
+  
+  .item button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+/* ===== About Page Specific Styles ===== */
+
+.about-page {
+    padding: 30px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .form-section {
+    text-align: center;
+  }
+  
+  .form-section h2 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 0 auto 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 0.95em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .contact-form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .about-text p {
+    line-height: 1.6;
+    font-size: 1em;
+    text-align: justify;
+  }
+/* ===== Community Page Specific Styles ===== */
+
+.community-page {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .community-page .event {
+    margin-bottom: 80px;
+  }
+  
+  .community-page h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .community-page p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+      

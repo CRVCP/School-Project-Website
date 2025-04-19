@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Book Haven</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header placeholder -->
+  <div id="header"></div>
+
+  <main class="about-page">
+    <section class="form-section">
+      <h2>Special Orders and Feedback</h2>
+      <form class="contact-form">
+        <label>Name</label>
+        <input type="text" placeholder="Value" />
+        <label>Subject</label>
+        <input type="text" placeholder="Value" />
+        <label>Email</label>
+        <input type="email" placeholder="Value" />
+        <label>Message</label>
+        <textarea placeholder="Value"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section class="about-text">
+      <p>
+        Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse selection
+        of books, magazines, journals, and office supplies. With a deep-rooted commitment to fostering
+        literary exploration and a love for reading, it is embarking on the creation of an online presence
+        that mirrors its dedication to the world of words. Serving a broad audience of book lovers and
+        knowledge seekers, its central goal is to amplify its visibility, cultivate a vibrant literary
+        community, and simplify the process of book inquiries and purchases. Its target audience comprises
+        avid readers, students, and individuals in search of high-quality reading materials and office
+        essentials. Book Haven Bookstore’s website theme revolves around celebrating the written word,
+        creating an inviting digital space that encourages literary discovery, and supporting intellectual
+        growth.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
+
+  <!-- Script to load header and footer -->
+  <script>
+    // Load header
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+        const pageTitle = document.getElementById('page-title');
+        if (pageTitle) pageTitle.textContent = document.title.split(' - ')[0];
+      });
+
+    // Load footer
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
