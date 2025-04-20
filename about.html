@@ -15,14 +15,18 @@
     <section class="form-section">
       <h2>Special Orders and Feedback</h2>
       <form class="contact-form">
-        <label>Name</label>
-        <input type="text" placeholder="Value" />
-        <label>Subject</label>
-        <input type="text" placeholder="Value" />
-        <label>Email</label>
-        <input type="email" placeholder="Value" />
-        <label>Message</label>
-        <textarea placeholder="Value"></textarea>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your Name" required />
+
+        <label for="subject">Subject</label>
+        <input id="subject" type="text" placeholder="Subject" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Your Email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+
         <button type="submit">Submit</button>
       </form>
     </section>
@@ -46,15 +50,20 @@
   <!-- Footer placeholder -->
   <div id="footer"></div>
 
-  <!-- Script to load header and footer -->
+  <!-- Load header and footer dynamically -->
   <script>
-    // Load header
+    // Load header and THEN load cart.js
     fetch('header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
         const pageTitle = document.getElementById('page-title');
         if (pageTitle) pageTitle.textContent = document.title.split(' - ')[0];
+
+        // ✅ Load cart.js after header is loaded (for cart modal/icon)
+        const script = document.createElement('script');
+        script.src = 'cart.js';
+        document.body.appendChild(script);
       });
 
     // Load footer

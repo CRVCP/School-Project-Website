@@ -1,11 +1,19 @@
-<footer>
-    <img src="images/logo.png" alt="Logo" class="footer-logo" />
-    <p>Subscribe to our Newsletter!</p>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About Us</a>
-      <a href="community.html">Community</a>
-    </div>
-  </footer>
-  
+<footer> 
+  <img src="images/logo.png" alt="Logo" class="footer-logo" />
+  <p>
+    <a href="#" onclick="subscribeMessage()">Subscribe to our Newsletter!</a>
+  </p>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="community.html">Community</a>
+  </div>
+</footer>
+
+<script>
+  function subscribeMessage() {
+    alert("Thanks for Subscribing!");
+  }
+</script>

@@ -32,15 +32,20 @@
   <!-- Footer placeholder -->
   <div id="footer"></div>
 
-  <!-- Script to load header and footer -->
+  <!-- Load header and footer -->
   <script>
-    // Load header
+    // Load header and then load cart.js after header is ready
     fetch('header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
         const pageTitle = document.getElementById('page-title');
         if (pageTitle) pageTitle.textContent = document.title.split(' - ')[0];
+
+        // ✅ Load cart.js AFTER header is loaded
+        const script = document.createElement('script');
+        script.src = 'cart.js';
+        document.body.appendChild(script);
       });
 
     // Load footer
