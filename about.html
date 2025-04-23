@@ -14,7 +14,7 @@
   <main class="about-page">
     <section class="form-section">
       <h2>Special Orders and Feedback</h2>
-      <form class="contact-form">
+      <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
         <label for="name">Name</label>
         <input id="name" type="text" placeholder="Your Name" required />
 
@@ -72,6 +72,21 @@
       .then(data => {
         document.getElementById('footer').innerHTML = data;
       });
+      
+    // Handle contact form submission
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const subject = document.getElementById('subject').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      // Show personalized alert
+      alert(`Thanks, ${name}, your message has been received!`);
+      
+      // Clear form fields
+      document.getElementById('contactForm').reset();
+    }
   </script>
 
 </body>

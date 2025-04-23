@@ -1,19 +1,47 @@
-<footer> 
-  <img src="images/logo.png" alt="Logo" class="footer-logo" />
-  <p>
-    <a href="#" onclick="subscribeMessage()">Subscribe to our Newsletter!</a>
-  </p>
-
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About Us</a>
-    <a href="community.html">Community</a>
+<footer style="background-color: #fbd6cf; padding: 20px; text-align: center;">
+  <div style="margin-bottom: 20px;">
+    <h3 style="margin-bottom: 10px;">Sign up for our Newsletter</h3>
+    <form id="subscribe-form">
+      <input type="email" id="email" placeholder="Your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
   </div>
-</footer>
 
-<script>
-  function subscribeMessage() {
-    alert("Thanks for Subscribing!");
-  }
-</script>
+  <nav style="margin-bottom: 10px;">
+    <a href="index.html" style="margin: 0 10px;">Home</a>
+    <a href="gallery.html" style="margin: 0 10px;">Gallery</a>
+    <a href="about.html" style="margin: 0 10px;">About Us</a>
+    <a href="community.html" style="margin: 0 10px;">Community</a>
+  </nav>
+  <script>
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get the form element
+      const subscribeForm = document.getElementById('subscribe-form');
+      
+      // Add submit event listener to the form
+      if (subscribeForm) {
+        subscribeForm.addEventListener('submit', function(event) {
+          // Prevent the default form submission
+          event.preventDefault();
+          
+          // Get the email value
+          const email = document.getElementById("email").value;
+          
+          // Email validation regex pattern
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          
+          if (email && emailPattern.test(email)) {
+            // Show personalized alert with email
+            alert(`Thank you for subscribing, ${email}!`);
+            // Clear the form
+            subscribeForm.reset();
+          } else {
+            // Show alert for empty or invalid email
+            alert("Please enter a valid email address.");
+          }
+        });
+      }
+    });
+  </script>
+</footer>

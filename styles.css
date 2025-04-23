@@ -1,11 +1,19 @@
-/* Add this to your CSS if not already present */
+/* Global Styles */
 
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Calibri, 'Trebuchet MS', sans-serif; /* Set Calibri as body text font */
   }
   
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* Set Arial Bold for all headings */
+  }
+  
+  /* Page Layout */
   /* Wrap all page content */
   body {
     display: flex;
@@ -18,7 +26,7 @@ html, body {
     flex: 1;
   }
   
-  
+  /* Header Styles */
   header {
     background: #fdddec;
     text-align: center;
